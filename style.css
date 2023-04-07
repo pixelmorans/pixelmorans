@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: "FONTSPRING DEMO - Cera Round Pro Black";
+    src: url(fonts/Fontspring-DEMO-ceraroundpro-black.otf );
+  }
+  
+:root{
+    --mainColor: #3F1D3A;
+    --hoverColor: #F7931A;
+    --backgroundColor1: #000000;
+    --backgroundColor2: #3F1D3A;
+    --DarkOne: #000000;
+    --DarkTwo: #3F1D3A; 
+    --LightOne: #F7931A;
+    --LightTwo: #EA5A57;
+    --Bright: #ffffff; 
+}
+
+*, 
+*::before, 
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "FONTSPRING DEMO - Cera Round Pro Black", sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.big-wrapper{
+    padding: 1.7rem 0 2rem;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background:linear-gradient(to right, var(--backgroundColor1), var(--backgroundColor2)); 
+}
+
+.container{
+    position: relative;
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    z-index: 10;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 150px;
+}
+
+/* .links{
+    display: none;
+} */
+
+.links ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-family: "FONTSPRING DEMO - Cera Round Pro Medium" , sans-serif ;
+}
+
+.links a{
+    color: var(--LightOne);
+    margin-left: 3.5rem;
+    display: inline-block;
+}
+
+.links a:hover{
+    color: var(--Bright);
+}
+
+.btn {
+    display: inline-block;
+    padding: .9rem 1.9rem;
+    color: #fff !important;
+    font-family: "FONTSPRING DEMO - Cera Round Pro Medium" , sans-serif ;
+    background: linear-gradient(to bottom, var(--LightOne), var(--LightTwo));
+    border-radius: 16px;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.btn:hover{
+    background-color: var(--Bright);
+    transform: scale(1) !important;
+}
+
+/* .hamburger-menu{
+    width: 2rem;
+    height: 2rem;
+    background-color: #F7931A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-menu .bar{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: var(--backgroundColor2);
+} */
+
+.showcase-area .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar::before, 
+.bar::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--backgroundColor2);
+    border-radius: 3px;
+}
+
+.bar::before{
+    transform: translateY(-8px);
+}
+
+.bar::after{
+    transform: translateY(8px);
+}
+
+.big-title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    background: linear-gradient(to bottom, var(--LightOne), var(--LightTwo));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.text {
+    color: transparent;
+    font-family: "FONTSPRING DEMO - Cera Round Pro Light", sans-serif;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 2rem;
+    max-width: 600px;
+    line-height: 1.8;
+    background: linear-gradient(to bottom, var(--LightOne), var(--LightTwo));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.phones{
+    width: 80%;
+    transform: translate(30%, 40px);
+}
+
+.toggle-btn{
+    display: inline-block;
+    border: none;
+    background: var(--LightTwo);
+    color: var(--LightTwo);
+}
+
+
+@media screen and (max-width:870px){
+    .showcase-area .container {
+        grid-template-columns: 1fr;
+    }
+    .phones{
+        width: 100%;
+        transform: none;
+    }
+}
+
